@@ -8,7 +8,12 @@
         t2.setName("Thread 2");
        
         t1.start();
-        t1.join();
+        try {
+            t1.join();
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
         t2.start();
          
      }  
